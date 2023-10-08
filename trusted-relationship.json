@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "",
+        "Effect": "Allow",
+        "Principal": {
+          "Federated": "arn:aws:iam::12345678910:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/1847B92748AB2A2XYZ"
+        },
+        "Action": "sts:AssumeRoleWithWebIdentity",
+        "Condition": {
+          "StringEquals": {
+            "oidc.eks.eu-west-1.amazonaws.com/id/1847B92748AB2A2XYZ:sub": "system:serviceaccount:falco:ekscloudwatch"
+          }
+        }
+      }
+    ]
+  }

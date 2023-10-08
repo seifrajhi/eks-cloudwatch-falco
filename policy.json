@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": [
+                "logs:List*",
+                "logs:Get*",
+                "logs:FilterLogEvents",
+                "logs:Describe*",
+                "cloudwatch:List*",
+                "cloudwatch:Get*",
+                "cloudwatch:Describe*"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/eks/*"
+        }
+    ]
+}
